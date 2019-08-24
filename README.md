@@ -52,41 +52,46 @@ https://github.com/technoblogy/atmegabreadboard
 
 
 
-Sigrok:
-again all in /opt
+##Sigrok:
+
+I bought a Saleae 16 clone, the followig links help to setup sigrok to use Sigrok to work with the clone
+
 https://sigrok.org/wiki/Linux
+
 https://sigrok.org/wiki/Building#Build_requirements
+
 https://sigrok.org/wiki/WayEngineer_Saleae16
+
 https://sigrok.org/wiki/Saleae_Logic16#Firmware
+
 http://www.rudiswiki.de/wiki/sigrokLogic16
+
 https://sigrok.org/gitweb/?p=sigrok-util.git;a=tree;f=firmware/saleae-logic16
 
-Repetier-Host:
-Download Linux Appimage from https://www.repetier.com/download-now/
-copy slic3r settings to ~/.Slic3r
 
-Freecad:
-sudo apt-get install freecadtcam.git
-installed in /usr/share/freecad
+##Repetier-Host:
+1. Download Linux Appimage from https://www.repetier.com/download-now/
+1. If you have old slic3r setting, copy them to ~/.Slic3r
 
-sudo add-apt-repository ppa:freecad-maintainers/freecad-stable 
+##Freecad:
+1. To use latest builds : `sudo add-apt-repository ppa:freecad-maintainers/freecad-stable` 
+1. `sudo apt-get install freecad`
+1. In debian/ubuntu, the is installed in /usr/share/freecad
 
-
-Openscad:
-all in /opt
-
-sudo git clone git://github.com/openscad/openscad.git
-cd openscad
-sudo git submodule update --init
-sudo ./scripts/uni-get-dependencies.sh
-./scripts/check-dependencies.sh
-sudo qmake openscad.pro
-sudo make
-sudo make install
+## OpenSCAD
+1. `cd /opt/'
+1. `sudo git clone git://github.com/openscad/openscad.git`
+1. `cd openscad`
+1. `sudo git submodule update --init`
+1. `sudo ./scripts/uni-get-dependencies.sh`
+1. `./scripts/check-dependencies.sh`
+1. `sudo qmake openscad.pro`
+1. `sudo make`
+1. `sudo make install`
 
 To remove the above and use the 2015 version:
-sudo make uninstall
-sudo apt-get install openscad
+1. `sudo make uninstall`
+1. `sudo apt-get install openscad`
 
 KiCad:
 sudo apt install kicad
