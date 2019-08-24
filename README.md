@@ -52,10 +52,9 @@ https://github.com/technoblogy/atmegabreadboard
 
 
 
-##Sigrok:
+## Sigrok:
 
 I bought a Saleae 16 clone, the followig links help to setup sigrok to use Sigrok to work with the clone
-
 https://sigrok.org/wiki/Linux
 
 https://sigrok.org/wiki/Building#Build_requirements
@@ -68,12 +67,11 @@ http://www.rudiswiki.de/wiki/sigrokLogic16
 
 https://sigrok.org/gitweb/?p=sigrok-util.git;a=tree;f=firmware/saleae-logic16
 
-
-##Repetier-Host:
+## Repetier-Host:
 1. Download Linux Appimage from https://www.repetier.com/download-now/
 1. If you have old slic3r setting, copy them to ~/.Slic3r
 
-##Freecad:
+## Freecad:
 1. To use latest builds : `sudo add-apt-repository ppa:freecad-maintainers/freecad-stable` 
 1. `sudo apt-get install freecad`
 1. In debian/ubuntu, the is installed in /usr/share/freecad
@@ -93,66 +91,57 @@ To remove the above and use the 2015 version:
 1. `sudo make uninstall`
 1. `sudo apt-get install openscad`
 
-KiCad:
-sudo apt install kicad
-installed in /usr/share/kicad
+## KiCad:
+1. `sudo apt install kicad`
+1. In debian/ubuntu, it is installed in /usr/share/kicad
+
 https://github.com/KiCad/kicad-library/issues/257
 https://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1512214.html
 
+## FlatCam:
+1. `cd /opt`
+1. `git clone https://bitbucket.org/jpcgt/flatcam`
+1. `cd flatcam`
+1. `sudo ./setup_ubuntu`
+1. `run using : python flatcam`
+1. Edit flatcam.desktop and copy to /usr/share/applications to create desktop item
 
 
-FlatCam:
-in /opt
-git clone https://bitbucket.org/jpcgt/flatcam
-cd flatcam
-sudo ./setup_ubuntu
-run using : python flatcam
-Edit flatcam.desktop and copy to /usr/share/applications to create desktop item
-
-
-
-For desktop files
+## For desktop files
+The following links help in creation of desktop icons/menu items
 /usr/share/applications
 https://unix.stackexchange.com/questions/403836/error-invalid-desktop-entry-file-when-using-web-browser-in-lxde
 https://developer.gnome.org/integration-guide/stable/desktop-files.html.en
 
+## XRDP
+1. `sudo apt-get install xrdp`
+1. `sudo apt install -y tigervnc-standalone-server`
 
-XRDP
-sudo apt-get install xrdp
-sudo apt install -y tigervnc-standalone-server
-
-Geany : (almost IDE)
+## Geany : (almost IDE)
 sudo apt-get install geany
 
+## Deja-dup/Duplicity
+I use this to back up mu computer in GCP
 
-Deja-dup/Duplicity
 sudo apt-get install deja-dup
 https://medium.com/google-cloud/how-to-make-ubuntu-backups-using-duplicity-and-google-cloud-storage-849edcc4196e
 
-VSCode
+## VSCode
 https://code.visualstudio.com/docs/?dv=linux64_deb
 
-PLATFORM IO
-python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)"
+## PLATFORM IO
+`python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)"`
 
+## PSPDEV
+A lot of info is present here: https://github.com/pspdev/psptoolchain
+It is installed in /usr/local/pspdev
 
+1. `sudo apt-get install  autoconf automake bison flex gcc g++ libusb-dev make libncurses5-dev libncursesw5-dev  patch libreadline7 libreadline7-dbg libgmp3-dev subversion texinfo wget mpc libelf-dev libmpfr-dev libmpfr-doc libmpfr4 libmpfr4-dbg git libsdl1.2-dev` 
+1. `sudo apt-get install g++ build-essential autoconf automake cmake doxygen bison flex libncurses5-dev libsdl1.2-dev libreadline-dev libusb-dev texinfo libgmp3-dev libmpfr-dev libelf-dev libmpc-dev libfreetype6-dev zlib1g-dev libtool libtool-bin subversion git tcl unzip wget`
+1. `sudo ./toolchain-sudo.sh`
 
-PSPDEV
-https://github.com/pspdev/psptoolchain
-
-Installed in /usr/local/pspdev
-
-sudo apt-get install  autoconf automake bison flex gcc g++ libusb-dev make libncurses5-dev libncursesw5-dev  patch libreadline7 libreadline7-dbg libgmp3-dev subversion texinfo wget mpc libelf-dev libmpfr-dev libmpfr-doc libmpfr4 libmpfr4-dbg git 
-
-libsdl1.2-dev
-
-
- sudo apt-get install g++ build-essential autoconf automake cmake doxygen bison flex libncurses5-dev libsdl1.2-dev libreadline-dev libusb-dev texinfo libgmp3-dev libmpfr-dev libelf-dev libmpc-dev libfreetype6-dev zlib1g-dev libtool libtool-bin subversion git tcl unzip wget
-
-sudo ./toolchain-sudo.sh
-
-
-make[1]: Leaving directory '/home/kaustubh/pspdev/psptoolchain/build/psplibraries/build/psp-ports/zziplib/mipsallegrexel-psp-elf'
+My particular installation gave this messge at the end
+`make[1]: Leaving directory '/home/kaustubh/pspdev/psptoolchain/build/psplibraries/build/psp-ports/zziplib/mipsallegrexel-psp-elf'
 Installation finished.
 Failed installing: angelscript bzip2 libpng openal opentri pixman SDL_image
-/usr/local/pspdev/bin added to your systems login scripts!
+/usr/local/pspdev/bin added to your systems login scripts!`
