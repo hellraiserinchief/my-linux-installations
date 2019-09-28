@@ -50,6 +50,9 @@ https://github.com/stefanbeller/USBasp/tree/master/bin/linux-nonroot
 ### Arduino Board to directly burn sketches to a standalone atmega
 https://github.com/technoblogy/atmegabreadboard
 
+### Add Rambo boards
+1. Add the following link to the 'Additional Boards Manager URL' (under Arduino > Prefrences) : https://raw.githubusercontent.com/ultimachine/ArduinoAddons/master/package_ultimachine_index.json
+1. Tools > Boards > Board Manager, search and install 'Rambo'
 
 
 ## Sigrok:
