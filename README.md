@@ -1,6 +1,6 @@
 # my-linux-installations
 
-This Readme contains a summary of the steps I use to setup my 'bench' PC fro my maker projects. I use a salvaged laptop without a screen as my 'bench' PC:
+This README contains a summary of the steps I use to setup my 'bench' PC for my maker projects. I use a salvaged laptop without a screen as my 'bench' PC:
 
 ## How to mirror monitors debian
   When I boot into a new installation, the default monitor in the internal monitor that I have removed (LVDS-1). I use these commands to mirror that monitor onto my external monitor:
